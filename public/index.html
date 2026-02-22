@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hütchenspiel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🎩 Hütchenspiel</h1>
+
+  <div id="menu" class="panel">
+    <h2>Wähle deine Rolle</h2>
+    <p class="muted">Du kannst erst spielen, wenn du eine Rolle gewählt hast.</p>
+
+    <div class="roles">
+      <button id="btnHider">Ich bin Verstecker (Spieler 2)</button>
+      <button id="btnGuesser">Ich bin Rater (Spieler 1)</button>
+    </div>
+
+    <p id="menuMsg" class="muted"></p>
+  </div>
+
+
+  <div id="game" class="panel hidden">
+    <p id="info">Warte…</p>
+    <h2 id="score">0 : 0</h2>
+
+    <div class="table">
+      <div class="cup" data-id="0"></div>
+      <div class="cup" data-id="1"></div>
+      <div class="cup" data-id="2"></div>
+    </div>
+
+    <button id="btnChangeRole" class="ghost">Rolle wechseln</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
+
